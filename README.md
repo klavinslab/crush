@@ -7,6 +7,8 @@ To build the crush Docker image:
   docker build -t crush .
 ```
 
+Before using crush, you'll have to edit `config.json` to specify your connection to Aquarium. See `config-example.json`. 
+
 And to run it and log log into it
 
 ```bash
