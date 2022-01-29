@@ -1,0 +1,4 @@
+#!/usr/local/bin/node
+
+console.log("You've got serious thrill issues dude... awesome!");
+

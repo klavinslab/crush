@@ -1,0 +1,14 @@
+{
+  "name": "crush",
+  "version": "0.0.1",
+  "description": "Command line tools for developing Aquarium protocols.",
+  "main": "crush",
+  "scripts": {
+    "test": "crush"
+  },
+  "keywords": [
+    "Aquarium"
+  ],
+  "author": "Eric Klavins",
+  "license": "GPL-3.0-or-later"
+}
