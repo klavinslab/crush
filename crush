@@ -1,4 +1,25 @@
 #!/usr/local/bin/node
 
-console.log("You've got serious thrill issues dude... awesome!");
+const help = require("./help.js");
+const test = require("./test.js")
 
+args = process.argv;
+
+if ( args.length <= 2 || args[2] == "help" ) {
+
+  help();
+
+} else {
+
+    switch(args[2]) {
+
+        case "test":
+            test();
+            break;
+
+        default:
+            console.log("unknown command '" + args[2] + "'. Try 'crush help'");
+
+    }
+
+}
