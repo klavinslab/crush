@@ -10,7 +10,7 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
   help();
 
-} else {``
+} else {
 
     switch(args[2]) {
 
