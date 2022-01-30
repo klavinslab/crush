@@ -8,7 +8,6 @@ async function stats() {
     console.log("Retrieving operation type stats");
 
     let operation_types = [];
-    let statistics = [];
     await connect();
     operation_types = await AQ.OperationType.all();
     
