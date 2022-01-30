@@ -1,3 +1,4 @@
 gofish/
 tmp/
 .config.json
+node_modules/

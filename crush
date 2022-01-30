@@ -1,7 +1,8 @@
 #!/usr/local/bin/node
 
 const help = require("./help.js");
-const test = require("./test.js")
+const test = require("./test.js");
+const stats = require("./stats.js");
 
 args = process.argv;
 
@@ -9,13 +10,17 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
   help();
 
-} else {
+} else {``
 
     switch(args[2]) {
 
         case "test":
             test();
             break;
+
+        case "stats":
+            stats();
+            break;            
 
         default:
             console.log("unknown command '" + args[2] + "'. Try 'crush help'");
