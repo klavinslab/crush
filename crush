@@ -19,7 +19,7 @@ if ( args.length <= 2 || args[2] == "help" ) {
             break;
 
         case "stats":
-            stats("");
+            stats.stats();
             break;
 
         default:
@@ -30,11 +30,11 @@ if ( args.length <= 2 || args[2] == "help" ) {
 } else {
     switch(args[3]) {
         case "-mr":
-            stats("mr");
+            stats.most_recent();
             break;
 
         case "-md":
-            stats("md");
+            stats.most_done();
             break;
 
         default:
