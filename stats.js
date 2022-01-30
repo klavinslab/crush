@@ -1,7 +1,5 @@
 const AQ = require('./gofish/aquarium.js');
 const connect = require("./connect.js");
-var readline = require('readline');
-const { promisify } = require('util');
 
 async function stats() {
 
