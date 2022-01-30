@@ -10,7 +10,7 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
   help();
 
-} else {``
+} else if ( args.length == 3 ) {
 
     switch(args[2]) {
 
@@ -19,12 +19,26 @@ if ( args.length <= 2 || args[2] == "help" ) {
             break;
 
         case "stats":
-            stats();
-            break;            
+            stats("");
+            break;
 
         default:
             console.log("unknown command '" + args[2] + "'. Try 'crush help'");
 
     }
 
+} else {
+    switch(args[3]) {
+        case "-mr":
+            stats("mr");
+            break;
+
+        case "-md":
+            stats("md");
+            break;
+
+        default:
+            console.log("unknown option '" + args[3] + "' for command '" + args[2] + "'. Try 'crush help'");
+
+    }
 }
