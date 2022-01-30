@@ -5,9 +5,8 @@ async function stats() {
 
     console.log("Retrieving operation type stats");
 
-    let operation_types = [];
     await connect();
-    operation_types = await AQ.OperationType.all();
+    let operation_types = await AQ.OperationType.all();
     
     for ( let i=0; i<operation_types.length; i++ ) {
         let response = await AQ.get("/operation_types/"+operation_types[i].id+"/stats");
