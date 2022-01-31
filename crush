@@ -2,6 +2,7 @@
 
 const help = require("./help.js");
 const test = require("./test.js");
+const Puller = require("./pull.js");
 const Stats = require("./stats");
 const stats = new Stats();
 
@@ -20,6 +21,11 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
         case "stats":
             stats.display(stats.all());
+            break;
+
+        case "pull":
+            let puller = new Puller("staging");
+            puller.pull();
             break;
 
         default:
