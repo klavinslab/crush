@@ -2,35 +2,45 @@
 
 const help = require("./help.js");
 const test = require("./test.js");
-const stats = require("./stats.js");
-const Puller = require("./pull.js");
+const Stats = require("./stats");
+const stats = new Stats();
 
 args = process.argv;
 
 if ( args.length <= 2 || args[2] == "help" ) {
 
-  help();
+    help();
 
-} else {
+} else if ( args.length == 3 ) {
 
     switch(args[2]) {
-
         case "test":
             test();
             break;
 
         case "stats":
-            stats();
-            break;
-            
-        case "pull":
-            let puller = new Puller("staging");
-            puller.pull();
+            stats.display(stats.all());
             break;
 
         default:
             console.log("unknown command '" + args[2] + "'. Try 'crush help'");
+    }
 
+} else {
+
+    switch(args[3]) {
+        case "-mr":
+            stats.sort_by_most_recent();
+            stats.display(stats.top(10));
+            break;
+
+        case "-md":
+            stats.sort_by_most_done();
+            stats.display(stats.top(10));
+            break;
+
+        default:
+            console.log("unknown option '" + args[3] + "' for command '" + args[2] + "'. Try 'crush help'");
     }
 
 }
