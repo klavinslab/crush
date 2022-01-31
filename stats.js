@@ -1,11 +1,12 @@
 const AQ = require('./gofish/aquarium.js');
-const connect = require("./connect.js");
+const Connection = require("./connect.js");
 
 async function stats() {
 
     console.log("Retrieving operation type stats");
 
-    await connect();
+    let c = new Connection("staging");
+    await c.connect();
     let operation_types = await AQ.OperationType.all();
     
     for ( let i=0; i<operation_types.length; i++ ) {

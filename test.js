@@ -1,8 +1,9 @@
-const connect = require("./connect.js");
+const Connection = require("./connect.js");
 
-function stats() {
+function test() {
     console.log("Testing connection ...");
-    connect().then(console.log);
+    let c = new Connection("staging");
+    c.connect().then(console.log);
 }
 
-module.exports = stats;
+module.exports = test;

@@ -1,5 +1,19 @@
 {
-    "aquarium_url": "http://10.19.255.108:3000",
-    "username": "klavins",
-    "password": "nyquist"
+
+    "instances": {
+    
+        "staging": {
+            "url": "http://10.19.255.108:3000",
+            "username": "klavins",
+            "password": "nyquist"
+        },
+
+        "production": {
+            "url": "http://not-ready-for-this.yet",
+            "username": "klavins",
+            "password": "nyquist"
+        }
+
+    }
+
 }

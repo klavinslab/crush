@@ -3,6 +3,7 @@
 const help = require("./help.js");
 const test = require("./test.js");
 const stats = require("./stats.js");
+const Puller = require("./pull.js");
 
 args = process.argv;
 
@@ -20,7 +21,12 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
         case "stats":
             stats();
-            break;            
+            break;
+            
+        case "pull":
+            let puller = new Puller("staging");
+            puller.pull();
+            break;
 
         default:
             console.log("unknown command '" + args[2] + "'. Try 'crush help'");
