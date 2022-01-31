@@ -1,88 +1,81 @@
 const AQ = require('./gofish/aquarium.js');
 const connect = require("./connect.js");
 
-async function stats() {
-    let operation_types = await get_operation_types();
+class Stats {
+    constructor() {
+        this.operation_types = this.get_operation_types();
+    }
 
-    for (let i = 0; i < operation_types.length; i++) {
-        let response = await AQ.get("/operation_types/"+operation_types[i].id+"/stats");
-        let stats = JSON.parse(response.data);
-        console.log(`${i}: ${operation_types[i].category}/${operation_types[i].name}`);
-        for (const [key, val] of Object.entries(stats)) {
-            console.log("\t" + key + ": " + val);
+    async get_operation_types() {
+        await connect();
+        let operation_types = await AQ.OperationType.all();
+        console.log("Retrieving operation type stats");
+
+        for (let i = 0; i < operation_types.length; i++) {
+            let response = await AQ.get("/operation_types/"+operation_types[i].id+"/stats");
+            let stats = JSON.parse(response.data);
+            operation_types[i].stat_data = stats;
+            this.show_progress(i, operation_types.length);
         }
+
+        return operation_types;
+    }
+
+    async sort_by_most_recent() {
+        let operation_types = await this.operation_types;
+        operation_types.sort(function (fst, snd) {
+            if (!fst.stat_data.last_run) {
+                return 1;
+            } else if (!snd.stat_data.last_run) {
+                return -1;
+            } else {
+                return snd.stat_data.last_run.localeCompare(fst.stat_data.last_run);
+            }
+        });
+
+        console.log("\nRetrieving most recent runs");
+    }
+
+    async sort_by_most_done() {
+        let operation_types = await this.operation_types;
+        operation_types.sort(function (fst, snd) {
+            if (!fst.stat_data.done) {
+                return 1;
+            } else if (!snd.stat_data.done) {
+                return -1;
+            } else {
+                return snd.stat_data.done - fst.stat_data.done;
+            }
+        });
+
+        console.log("\nRetrieving most done runs");
+    }
+
+    async display(operation_list) {
+        let operations = await operation_list;
+        for (let i = 0; i < operations.length; i++) {
+            let stats = operations[i].stat_data;
+            console.log(`${i + 1}: ${operations[i].category}/${operations[i].name}`);
+            for (const [key, val] of Object.entries(stats)) {
+                console.log("\t" + key + ": " + val);
+            }
+        }
+    }
+
+    show_progress(i, n) {
+        process.stdout.clearLine();
+        process.stdout.cursorTo(0);
+        process.stdout.write("Progress: " + Math.ceil(100*i/n) + "%");
+    }
+
+    async all() {
+        return await this.operation_types;
+    }
+
+    async top(n) {
+        let operation_types = await this.operation_types;
+        return operation_types.slice(0, n);
     }
 }
 
-async function most_recent() {
-    let operation_types = await get_operation_types();
-    let stat_map = {};
-
-    for (let i = 0; i < operation_types.length; i++) {
-        let response = await AQ.get("/operation_types/"+operation_types[i].id+"/stats");
-        let stats = JSON.parse(response.data);
-        console.log(`Processing ${operation_types[i].category}/${operation_types[i].name}`);
-        if (stats.last_run) {
-            stat_map[i] = stats;
-        }
-    }
-
-    let sorted_stats = Object.keys(stat_map).map(function(key) {
-        return [key, stat_map[key]];
-    });
-
-    sorted_stats.sort(function (fst, snd) {
-        return snd[1].last_run.localeCompare(fst[1].last_run);
-    });
-
-    console.log("Retrieving top 10 most recent runs");
-
-    print_top_10(operation_types, sorted_stats);
-}
-
-async function most_done() {
-    let operation_types = await get_operation_types();
-    let stat_map = {};
-
-    for (let i = 0; i < operation_types.length; i++) {
-        let response = await AQ.get("/operation_types/"+operation_types[i].id+"/stats");
-        let stats = JSON.parse(response.data);
-        console.log(`Processing ${operation_types[i].category}/${operation_types[i].name}`);
-        if (stats.done) {
-            stat_map[i] = stats;
-        }
-    }
-
-    let sorted_stats = Object.keys(stat_map).map(function(key) {
-        return [key, stat_map[key]];
-    });
-
-    sorted_stats.sort(function (fst, snd) {
-        return snd[1].done - fst[1].done;
-    });
-
-    console.log("Retrieving top 10 most done runs");
-
-    print_top_10(operation_types, sorted_stats);
-}
-
-function print_top_10(operation_types, sorted_stats) {
-    for (let i = 0; i < 10; i++) {
-        let stats = sorted_stats[i];
-        let index = stats[0];
-        let stat_data = stats[1];
-        console.log(`${i + 1}: ${operation_types[index].category}/${operation_types[index].name}`);
-        for(const [key,val] of Object.entries(stat_data)) {
-            console.log("\t" + key + ": " + val);
-        }
-    }
-}
-
-async function get_operation_types () {
-    console.log("Retrieving operation type stats");
-    await connect();
-    let operation_types = await AQ.OperationType.all();
-    return operation_types;
-}
-
-module.exports = {stats, most_done, most_recent};
+module.exports = Stats;
