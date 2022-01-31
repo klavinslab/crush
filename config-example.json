@@ -1,6 +1,21 @@
 {
+
     "REMARK": "Edit and move this file to config.json",
-    "aquarium_url": "http://your.aquarium.instance.org",
-    "username": "yourlogin",
-    "password": "yourpassword"
+
+    "instances": {
+    
+        "staging": {
+            "url": "http://your-staging-server.org",
+            "username": "your-login",
+            "password": "your-passowrd"
+        },
+
+        "production": {
+            "url": "http://your-production-server.org",
+            "username": "your-login",
+            "password": "your-passowrd"
+        },
+
+    }
+
 }
