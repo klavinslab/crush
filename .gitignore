@@ -1,6 +1,6 @@
 gofish/
 tmp/
-.config.json
+config.json
 node_modules/
 staging/
 production/
