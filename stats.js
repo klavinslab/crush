@@ -2,10 +2,12 @@ const AQ = require('./gofish/aquarium.js');
 const Connection = require("./connect.js");
 
 class Stats {
+    // Creates a new Stats object with empty operation types (for now).
     constructor() {
         this.operation_types = [];
     }
 
+    // Gets all the operation types and stats from the data base and stores them.
     async get_operation_types() {
         let connection = new Connection("staging");
         await connection.connect();
@@ -21,6 +23,8 @@ class Stats {
         }
     }
 
+    // Sorts the operation types where the most recently run operation type is first
+    // and the least recently run operation type is last.
     sort_by_most_recent() {
         this.operation_types.sort(function (fst, snd) {
             if (!fst.stat_data.last_run) {
@@ -33,6 +37,9 @@ class Stats {
         });
     }
 
+    // Sorts the operation types where the operation type that has been done the most
+    // amount of times is first and the operation type that has been done the least
+    // amount of times is last.
     sort_by_most_done() {
         this.operation_types.sort(function (fst, snd) {
             if (!fst.stat_data.done) {
@@ -45,6 +52,7 @@ class Stats {
         });
     }
 
+    // Prints the top n operation types and stats to the console.
     display(n) {
         for (let i = 0; i < Math.max(n,this.operation_types.length); i++) {
             let stats = this.operation_types[i].stat_data;
@@ -55,16 +63,17 @@ class Stats {
         }
     }
 
+    // Prints all the operation types and stats to the console.
     display_all() {
         display(this.operation_types.length);
     }
 
+    // Prints the progess of loading the operation types as a percentage to the console.
     show_progress(i, n) {
         process.stdout.clearLine();
         process.stdout.cursorTo(0);
         process.stdout.write("Progress: " + Math.ceil(100*i/n) + "%");
     }
-
 
 }
 
