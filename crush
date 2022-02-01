@@ -4,7 +4,7 @@ const help = require("./help.js");
 const test = require("./test.js");
 const Puller = require("./pull.js");
 const Stats = require("./stats");
-const stats = new Stats();
+const { stat } = require("fs");
 
 args = process.argv;
 
@@ -12,7 +12,7 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
     help();
 
-} else if ( args.length == 3 ) {
+} else {
 
     switch(args[2]) {
         case "test":
@@ -20,7 +20,22 @@ if ( args.length <= 2 || args[2] == "help" ) {
             break;
 
         case "stats":
-            stats.display(stats.all());
+            const stats = new Stats();
+            stats.get_operation_types().then(() => {
+                if ( args.length == 4 ) {
+                    if ( args[3] == "-mr") {
+                        stats.sort_by_most_recent();
+                        stats.display(10);
+                    } else if ( args[3] == "-md") {
+                        stats.sort_by_most_done();
+                        stats.display(10);
+                    } else {
+                        console.log("Unknown option to stats")
+                    }
+                } else {
+                    stats.display_all();
+                }
+            });
             break;
 
         case "pull":
@@ -30,23 +45,6 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
         default:
             console.log("unknown command '" + args[2] + "'. Try 'crush help'");
-    }
-
-} else {
-
-    switch(args[3]) {
-        case "-mr":
-            stats.sort_by_most_recent();
-            stats.display(stats.top(10));
-            break;
-
-        case "-md":
-            stats.sort_by_most_done();
-            stats.display(stats.top(10));
-            break;
-
-        default:
-            console.log("unknown option '" + args[3] + "' for command '" + args[2] + "'. Try 'crush help'");
     }
 
 }
