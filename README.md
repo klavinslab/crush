@@ -44,9 +44,11 @@ Do
 
 ```bash
 crush stats
+crush stats -mr
+crust stats -md
 ```
 
-to see statistics for various operation types. This could be used to decide where to put your efforts in improving the protocol code base.
+to see statistics for various operation types. The `mr` option shows the top 10 most recently exectued operation types. The `md` option shows the top 10 most successfully completed operation types. This could be used to decide where to put your efforts in improving the protocol code base.
 
 Pulling Code
 ===
@@ -88,7 +90,7 @@ staging/
     ...
 ```
 
-You can commit version control this whol thing with git, for example, doing
+You can commit version control this whole thing with git, for example, doing
 
 ```bash
 cd staging
