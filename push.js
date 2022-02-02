@@ -7,7 +7,7 @@ class Pusher {
   async push() {
     let c = new Connection("staging");
     await c.connect();
-    let info = this.load_info();
+    let info = this.info();
     if ( info.type == "Library" ) {
         this.push_code(info, "source", this.contents("source.rb"));
     } else if ( info.type == "OperationType" ) {
@@ -18,7 +18,7 @@ class Pusher {
     }
   }
 
-  load_info() {
+  info() {
     if ( fs.existsSync("info.json") ) {
         return JSON.parse(fs.readFileSync('info.json'));
     } else {
