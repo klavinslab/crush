@@ -90,7 +90,7 @@ staging/
     ...
 ```
 
-You can commit version control this whole thing with git, for example, doing
+You can version control this whole thing with git, for example, doing
 
 ```bash
 cd staging
@@ -98,3 +98,19 @@ git init
 git add .
 git commit -m "Initial commit"
 ```
+
+Pushing Code
+===
+
+After editing code, you can push it back to an Aquarium instance. On the command like, change to a directory containing either library code or operation type code. Then do
+
+```bash
+crush push
+```
+
+In a library code directory, this command will push the `source.rb` file to the instance. In an operation type directory, this command will push `protocol.rb`, `precondition.rb`, `test.rb`, and `documentation.md` back to the instance. 
+
+Testing Code
+===
+
+***TODO***
