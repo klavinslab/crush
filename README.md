@@ -32,7 +32,7 @@ Testing the Connection
 Do
 
 ```bash
-crush test
+crush ping
 ```
 
 to see if crush can connect to your server. Currently, crush only uses the "staging" server, so that's the one to specify correctly in config.json.
@@ -113,4 +113,8 @@ In a library code directory, this command will push the `source.rb` file to the 
 Testing Code
 ===
 
-***TODO***
+To test code, change into an operation type directory and do
+
+```bash
+crush test
+```
