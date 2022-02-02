@@ -5,6 +5,7 @@ const test = require("./test.js");
 const Puller = require("./pull.js");
 const Stats = require("./stats");
 const { stat } = require("fs");
+const Pusher = require("./push.js");
 
 args = process.argv;
 
@@ -40,7 +41,18 @@ if ( args.length <= 2 || args[2] == "help" ) {
 
         case "pull":
             let puller = new Puller("staging");
-            puller.pull();
+            puller.pull()
+                  .catch(error => {
+                      console.log(error)
+                  });
+            break;
+
+        case "push":
+            let pusher = new Pusher();
+            pusher.push()
+                  .catch(error => {
+                      console.log(error)
+                  });
             break;
 
         default:

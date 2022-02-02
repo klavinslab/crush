@@ -128,7 +128,8 @@ class Puller {
         let info = {
             id: object.id,
             name: object.name,
-            category: object.category
+            category: object.category,
+            type: object.model.model
         }
         let path = object.model.model == "OperationType" 
                                        ? this.op_type_path(object) 

@@ -8,7 +8,7 @@ class Connection {
     }
 
     connect() {
-        this.config = JSON.parse(fs.readFileSync('config.json'));
+        this.config = JSON.parse(fs.readFileSync('/home/crush/config.json'));
         if ( !this.config.instances[this.instance_name]) {
             throw "Instance name '" + this.instance_name + "' not found in config.json";
         }
