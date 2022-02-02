@@ -1,10 +1,11 @@
 #!/usr/local/bin/node
 
 const help = require("./help.js");
-const test = require("./test.js");
+const Tester = require("./test.js");
+const ping = require("./ping.js");
 const Puller = require("./pull.js");
 const Stats = require("./stats");
-const { stat } = require("fs");
+const { stat, ReadStream } = require("fs");
 const Pusher = require("./push.js");
 
 args = process.argv;
@@ -16,12 +17,19 @@ if ( args.length <= 2 || args[2] == "help" ) {
 } else {
 
     switch(args[2]) {
+
+        case "ping":
+            ping();
+            break;
+
         case "test":
-            test();
+            let tester = new Tester();
+            tester.run()
+                  .then(() => tester.report());
             break;
 
         case "stats":
-            const stats = new Stats();
+            let stats = new Stats();
             stats.get_operation_types().then(() => {
                 if ( args.length == 4 ) {
                     if ( args[3] == "-mr") {

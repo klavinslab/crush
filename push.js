@@ -1,36 +1,20 @@
 const AQ = require("./gofish/aquarium.js")
-const fs = require('fs');
 const Connection = require("./connect.js");
+const util = require("./util.js")
 
 class Pusher {
 
   async push() {
     let c = new Connection("staging");
     await c.connect();
-    let info = this.info();
+    let info = util.info();
     if ( info.type == "Library" ) {
-        this.push_code(info, "source", this.contents("source.rb"));
+        this.push_code(info, "source", util.contents("source.rb"));
     } else if ( info.type == "OperationType" ) {
-        await this.push_code(info, "protocol", this.contents("protocol.rb"));
-        await this.push_code(info, "precondition", this.contents("precondition.rb"));
-        await this.push_code(info, "test", this.contents("test.rb"));
-        await this.push_code(info, "documentation", this.contents("documentation.md"));
-    }
-  }
-
-  info() {
-    if ( fs.existsSync("info.json") ) {
-        return JSON.parse(fs.readFileSync('info.json'));
-    } else {
-        throw "Could not read info.json. Are you in a code directory?"
-    }
-  }
-
-  contents(filename) {
-    if ( fs.existsSync(filename) ) {
-        return fs.readFileSync(filename, 'utf8');
-    } else {
-        throw "Could not read '" + filename + "' when pushing."
+        await this.push_code(info, "protocol", util.contents("protocol.rb"));
+        await this.push_code(info, "precondition", util.contents("precondition.rb"));
+        await this.push_code(info, "test", util.contents("test.rb"));
+        await this.push_code(info, "documentation", util.contents("documentation.md"));
     }
   }
 
