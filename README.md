@@ -102,7 +102,7 @@ git commit -m "Initial commit"
 Pushing Code
 ===
 
-After editing code, you can push it back to an Aquarium instance. On the command like, change to a directory containing either library code or operation type code. Then do
+After editing code, you can push it back to an Aquarium instance. On the command line, change to a directory containing either library code or operation type code. Then do
 
 ```bash
 crush push
