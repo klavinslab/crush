@@ -18,7 +18,7 @@ class Puller {
         this.mkdir(this.instance_name);
         await this.connection.connect();
 
-        this.op_types = await AQ.OperationType.where({deployed: true});
+        this.op_types = await AQ.OperationType.all();
         this.libs = await AQ.Library.all();
         let objects = this.libs.concat(this.op_types);
 
