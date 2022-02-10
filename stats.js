@@ -12,7 +12,6 @@ class Stats {
         let connection = new Connection("staging");
         await connection.connect();
         this.operation_types = await AQ.OperationType.all();
-        this.operation_types = this.operation_types.slice(0, 20);
         console.log("Retrieving operation type stats");
 
         for (let i = 0; i < this.operation_types.length; i++) {
@@ -54,7 +53,9 @@ class Stats {
 
     // Prints the top n operation types and stats to the console.
     display(n) {
-        for (let i = 0; i < Math.max(n,this.operation_types.length); i++) {
+        // Prints empty line before displaying to separate from progress line.
+        console.log();
+        for (let i = 0; i < Math.min(n,this.operation_types.length); i++) {
             let stats = this.operation_types[i].stat_data;
             console.log(`${i + 1}: ${this.operation_types[i].category}/${this.operation_types[i].name}`);
             for (const [key, val] of Object.entries(stats)) {
@@ -65,7 +66,7 @@ class Stats {
 
     // Prints all the operation types and stats to the console.
     display_all() {
-        display(this.operation_types.length);
+        this.display(this.operation_types.length);
     }
 
     // Prints the progess of loading the operation types as a percentage to the console.

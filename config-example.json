@@ -3,7 +3,7 @@
     "REMARK": "Edit and move this file to config.json",
 
     "instances": {
-    
+
         "staging": {
             "url": "http://your-staging-server.org",
             "username": "your-login",
@@ -14,7 +14,7 @@
             "url": "http://your-production-server.org",
             "username": "your-login",
             "password": "your-passowrd"
-        },
+        }
 
     }
 
