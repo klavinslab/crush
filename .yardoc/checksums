@@ -1,0 +1,151 @@
+staging/Cloning/op/Run Gel/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Pour Gel/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Check Plate/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Run Gel/protocol.rb a7ec790321850bb90b683153f6ca2211d7aee575
+staging/Cloning/op/Order Primer/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Pour Gel/protocol.rb 1a7c41dbb965ee12c50145456e77fc0d7a3e696a
+staging/Cloning/op/E Coli Lysate/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Maxiprep/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Midiprep/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Miniprep/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Check Plate/protocol.rb 199b273ba01c3bfc35f4a1d1f400fb0b00f97960
+staging/Cloning/op/Plate Agar Stab/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Run Gel/precondition.rb ed813c9324b929e6225988cad23890c582021a9e
+staging/Cloning/op/Transform Cells/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Assemble Plasmid/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Order Primer/protocol.rb 5702e5eaa1ba6233b98497f15a7a358214f3ae5a
+staging/Cloning/op/Pour Gel/precondition.rb ef6367503ec5d5128c4be6d21f5ccc05e690d11c
+staging/Cloning/op/Purify Gel Slice/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Rehydrate Primer/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/E Coli Colony PCR/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/E Coli Lysate/protocol.rb 3d619ba9409aca9bc78ca553a066a08cb4a6e343
+staging/Cloning/op/Extract Gel Slice/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Maxiprep/protocol.rb 42e0691cbf0b7e201247df922413278751450961
+staging/Cloning/op/Make Midiprep/protocol.rb b5613b65ca4328a7b8f308a2739544af10e437fd
+staging/Cloning/op/Make Miniprep/protocol.rb bafc77ed08d8cc719386ade87fe05334bdc315b2
+staging/Cloning/op/Make PCR Fragment/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Rehydrate Fragment/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Restriction Digest/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Send to Sequencing/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/lib/StripwellMethods/source.rb 16b0b8b6e5ce1193b39c8760c463887d3c8eae5d
+staging/Cloning/op/Check Plate/precondition.rb 220ef37de88bf96489fb91ad4cd9c7d093bb851d
+staging/Cloning/op/Clean Up Sequencing/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Glycerol Stock/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Plate Agar Stab/protocol.rb 0a30efa1ceebda4d622337bd1f548539788cf29b
+staging/Cloning/op/Streak E coli Plate/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Transform Cells/protocol.rb 578917e0cbec306615b1fdf9e4245ae721caece5
+staging/Cloning/op/Assemble Golden Gate/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Assemble Plasmid/protocol.rb 95960ec6b573a2d89e00a5898d7de38ac7198919
+staging/Cloning/op/Order Primer/precondition.rb 5892f2d87b8f53cdc7047cab467e93078b23520c
+staging/Cloning/op/Plate Glycerol Stock/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Purify Gel Slice/protocol.rb 8fbbfaf54c63d7f5c674f8574601e84b7bb2c84b
+staging/Cloning/op/Rehydrate Primer/protocol.rb e905bf97e7bb11abb96a5d90f7333906fda789d5
+staging/Cloning/op/Discard List of Items/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/E Coli Colony PCR/protocol.rb a7bee430bcc5bffb4bc4232dad2b0d0761e92304
+staging/Cloning/op/E Coli Lysate/precondition.rb 8b6500908fe6c29973d8ccc174d2fde942637c84
+staging/Cloning/op/Extract Gel Slice/protocol.rb 63208a8852b23ac6c1e56796edc47dbbeacea4d7
+staging/Cloning/op/Make Maxiprep/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Make Midiprep/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Make Miniprep/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Make PCR Fragment/protocol.rb 3c0082f1ca1833eb5f17f57a5591be16205a6db7
+staging/Cloning/op/Order gBlock Fragment/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Rehydrate Fragment/protocol.rb f96f4ab6ba1520bcad24995d5e850931381dcd7f
+staging/Cloning/op/Restriction Digest/protocol.rb 8b9af001882f09cdeef2c96f4010d47aa3e2fa35
+staging/Cloning/op/Send to Sequencing/protocol.rb 4ebaba6a244323aaabf4976953d24cca262f0f8a
+staging/Cloning/op/Clean Up Sequencing/protocol.rb 245c98275dccb1fc83fefe722f1e831fd4f22981
+staging/Cloning/op/Make Glycerol Stock/protocol.rb 079cde656e418a984a927fcbc8f852017e3da89d
+staging/Cloning/op/Make PCR Fragment (Old)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Plate Agar Stab/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Plate Transformed Cells/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Streak E coli Plate/protocol.rb bcced0843473245ee3038e2422deb2f865d00e2c
+staging/Cloning/op/Transform Cells/precondition.rb fb2a7d7b3d60a1ac64ea8c8696f88a55fb01ef9c
+staging/Cloning/op/Assemble Golden Gate/protocol.rb e75bc4a0c95f482819af8331b9c4f12e4c7dd226
+staging/Cloning/op/Assemble Plasmid/precondition.rb 060f4e16aa1b68c8ac3bcb90b8d576850f9bf442
+staging/Cloning/op/Make PCR Fragment (copy)/test.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+staging/Cloning/op/Plate Glycerol Stock/protocol.rb f526fa03c518cf203682225a71dbddf46a8d75e8
+staging/Cloning/op/Purify Gel Slice/precondition.rb ed813c9324b929e6225988cad23890c582021a9e
+staging/Cloning/op/Rehydrate Primer/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Send to Sequencing (old)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Discard List of Items/protocol.rb 4b395d30245d4b5b0f847b2d14539682d916a17d
+staging/Cloning/op/E Coli Colony PCR/precondition.rb 8b6500908fe6c29973d8ccc174d2fde942637c84
+staging/Cloning/op/Extract Gel Slice/precondition.rb ed813c9324b929e6225988cad23890c582021a9e
+staging/Cloning/op/Make Glycerol Stock (old)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Overnight Suspension/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make PCR Fragment/precondition.rb 748f15129d842ef377c1c16a2dce2fb58236fd95
+staging/Cloning/op/Order gBlock Fragment/protocol.rb 145b71898dd25a4c52b067a139d7caa89b944425
+staging/Cloning/op/Upload Sequencing Results/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Glycerol Stock (copy)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Rehydrate Fragment/precondition.rb fcf76c23d3bc30d060d7dc390f0bbe47dcb2616b
+staging/Cloning/op/Restriction Digest/precondition.rb ed813c9324b929e6225988cad23890c582021a9e
+staging/Cloning/op/Send to Sequencing/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Clean Up Sequencing/precondition.rb e28cdc39ac9e0accaad25f2cf7afac6340dfdfae
+staging/Cloning/op/Make Glycerol Stock/precondition.rb e171a0d41ca99889665dc0165cec49df038b4fc4
+staging/Cloning/op/Make PCR Fragment (Old)/protocol.rb af737c6b260f5052cd54e3285e6d5143583560f9
+staging/Cloning/op/Plate Transformed Cells/protocol.rb fa612d05bf23efbb8ab240f39b795bd5492b37c4
+staging/Cloning/op/Stitch by Overlap Extension/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Streak E coli Plate/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Assemble Golden Gate/precondition.rb 6e2a324245d02e56a8571073ed509ed3cbda09ef
+staging/Cloning/op/Discard List of Items (copy)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make PCR Fragment (copy)/protocol.rb 2de632107c824fd6d5af480a257a11d5a3f32332
+staging/Cloning/op/Plate Glycerol Stock/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Prepare Golden Gate Dilution/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Send to Sequencing (old)/protocol.rb 165d82d1fcad2fe21bb1ecf6bf40a2cdff6b8a1b
+staging/Cloning/op/Discard List of Items/precondition.rb 749f482e07acf16b2200b3be748449ca19d60fe9
+staging/Cloning/op/Make Glycerol Stock (old)/protocol.rb e4251248c7d5216b2681bda3c3e109a075883b80
+staging/Cloning/op/Make Glycerol Stock (old-old)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Overnight Suspension/protocol.rb b9543bec8d6c84ad11883655fc40e2a678441bd1
+staging/Cloning/op/Order gBlock Fragment/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Parameterized Transform Cells/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Upload Sequencing Results/protocol.rb fd60ef00a348c5264795b26c08cc430607c09480
+staging/Cloning/op/Large Inoculation for Maxiprep/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Large Inoculation for Midiprep/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make Glycerol Stock (copy)/protocol.rb 511a5686d69c1a199a8325d13cb6b7f7fe15d163
+staging/Cloning/op/Make Primer Aliquot from Stock/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Transform Cells from Stripwell/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Make PCR Fragment (Old)/precondition.rb bb197d659e974f206c9a6b6541fe7fca3ad6318f
+staging/Cloning/op/Plate Transformed Cells/precondition.rb ebf93e59212d33e318b78b783f5cbe64db6e3c2d
+staging/Cloning/op/Stitch by Overlap Extension/protocol.rb ab38a373dee5e8ce89e976f479a9bc84f927ba06
+staging/Cloning/op/Upload Sequencing Results (old)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Discard List of Items (copy)/protocol.rb eaa1de11d8e602aa7d5b9d72cb089e7088111c87
+staging/Cloning/op/Make Overnight Suspension (copy)/test.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+staging/Cloning/op/Make PCR Fragment (copy)/precondition.rb 748f15129d842ef377c1c16a2dce2fb58236fd95
+staging/Cloning/op/Prepare Golden Gate Dilution/protocol.rb bfff5a507f959f391351086987b34b128ce29c90
+staging/Cloning/op/Send to Sequencing (old)/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Make Glycerol Stock (old)/precondition.rb cdb0b8523eb5d7b0d588a08f3d6c89aa29e6b5ad
+staging/Cloning/op/Make Glycerol Stock (old-old)/protocol.rb 4a00e3ad7d9da8423b6a742d291ded1e2936b8c8
+staging/Cloning/op/Make Overnight Suspension/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Parameterized Transform Cells/protocol.rb 7f67ca7103359cce868690628a4d00128b7347ce
+staging/Cloning/op/Stripwell to Unverified Fragments/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Upload Sequencing Results/precondition.rb 068b2301b11611deb1c3c66c9a9cbd27658d95c9
+staging/Cloning/op/Large Inoculation for Maxiprep/protocol.rb ba2b1b3ac7a07bc3cb7f49554411de6e94d8a5bd
+staging/Cloning/op/Large Inoculation for Midiprep/protocol.rb 02ce33eaf5ad2886f367b2e8b402bd09920c3a01
+staging/Cloning/op/Make Glycerol Stock (copy)/precondition.rb ed813c9324b929e6225988cad23890c582021a9e
+staging/Cloning/op/Make Primer Aliquot from Stock/protocol.rb b251510f63c5bb91d1469be10e85c51e60380b6e
+staging/Cloning/op/Transform Cells from Stripwell/protocol.rb 427e2c1e3db41b3c1fac5be3d403c573773ded30
+staging/Cloning/op/Stitch by Overlap Extension/precondition.rb 8b6500908fe6c29973d8ccc174d2fde942637c84
+staging/Cloning/op/Upload Sequencing Results (old)/protocol.rb a18b4d09774c5e1ad854f911392c9042558f55b5
+staging/Cloning/op/Upload Sequencing Results (old-old)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Discard List of Items (copy)/precondition.rb a316c18cf65c1a2524e32e72db6c934d0c7e4281
+staging/Cloning/op/Make Overnight Suspension (copy)/protocol.rb 751a825ff6cea7b3dbb179c173658f32572d52ed
+staging/Cloning/op/Prepare Golden Gate Dilution/precondition.rb 8b6500908fe6c29973d8ccc174d2fde942637c84
+staging/Cloning/op/Make Glycerol Stock (old-old)/precondition.rb 0489e6a573e3d3b7d004bdbeedaa6d61b4a2cb0f
+staging/Cloning/op/Parameterized Transform Cells/precondition.rb 8b6500908fe6c29973d8ccc174d2fde942637c84
+staging/Cloning/op/Stripwell to Unverified Fragments/protocol.rb 964760a8b4ce8dc9f327598ee3f5765a04c28014
+staging/Cloning/op/Transform Cells from Stripwell (copy)/test.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+staging/Cloning/op/Large Inoculation for Maxiprep/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Large Inoculation for Midiprep/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Make Primer Aliquot from Stock/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Transform Cells from Stripwell/precondition.rb b35af2d71cc9c3313a55660f2eba19ce3fbf1a08
+staging/Cloning/op/Upload Sequencing Results (duplicate 1)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Upload Sequencing Results (duplicate 2)/test.rb 18e9b88c2b893ebcd43c297efcbdb44ebb651284
+staging/Cloning/op/Upload Sequencing Results (old)/precondition.rb 87943ced8dae0159e207d6f2541dbdb978f044bb
+staging/Cloning/op/Upload Sequencing Results (old-old)/protocol.rb c6ad1f49efad29629cdfcdf2028675fd8012ef5c
+staging/Cloning/op/Make Overnight Suspension (copy)/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Stripwell to Unverified Fragments/precondition.rb 8b6500908fe6c29973d8ccc174d2fde942637c84
+staging/Cloning/op/Transform Cells from Stripwell (copy)/protocol.rb 51580b7658d0b8d3cab4b0881f5580017dfa11db
+staging/Cloning/op/Upload Sequencing Results (duplicate 1)/protocol.rb 20cf8b4792beddc131526aead2cb88c72bf231fb
+staging/Cloning/op/Upload Sequencing Results (duplicate 2)/protocol.rb 20cf8b4792beddc131526aead2cb88c72bf231fb
+staging/Cloning/op/Upload Sequencing Results (old-old)/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Transform Cells from Stripwell (copy)/precondition.rb b35af2d71cc9c3313a55660f2eba19ce3fbf1a08
+staging/Cloning/op/Upload Sequencing Results (duplicate 1)/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807
+staging/Cloning/op/Upload Sequencing Results (duplicate 2)/precondition.rb 2a51c0daf0f2eecd0c59c6f45454abc3eedb4807

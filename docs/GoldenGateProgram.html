@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: GoldenGateProgram
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "GoldenGateProgram";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (G)</a> &raquo;
+    
+    
+    <span class="title">GoldenGateProgram</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: GoldenGateProgram
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">GoldenGateProgram</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Units</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>staging/Cloning/op/Assemble Golden Gate/protocol.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="PROGRAMS-constant" class="">PROGRAMS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Standard</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CUTLIG</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>volume:</span> <span class='int'>20</span><span class='comma'>,</span>
+        <span class='label'>steps:</span> <span class='lbrace'>{</span>
+            <span class='label'>step1:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>37</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>5</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step2:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>20</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>2</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step3:</span> <span class='lbrace'>{</span><span class='label'>goto:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>times:</span> <span class='int'>39</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step4:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>37</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step5:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>80</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MoClo-YTK_37</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MoClo-YTK_37 TBD</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>volume:</span> <span class='int'>10</span><span class='comma'>,</span>
+        <span class='label'>steps:</span> <span class='lbrace'>{</span>
+            <span class='label'>step1:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>37</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>2</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step2:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>3</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step3:</span> <span class='lbrace'>{</span><span class='label'>goto:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>times:</span> <span class='int'>29</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step4:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>25</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step5:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>37</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step6:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>80</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MoClo-YTK_42</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MoClo-YTK_42 TBD</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>volume:</span> <span class='int'>10</span><span class='comma'>,</span>
+        <span class='label'>steps:</span> <span class='lbrace'>{</span>
+            <span class='label'>step1:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>42</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>2</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step2:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>16</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>3</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step3:</span> <span class='lbrace'>{</span><span class='label'>goto:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>times:</span> <span class='int'>29</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step4:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>25</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step5:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>42</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='label'>step6:</span> <span class='lbrace'>{</span><span class='label'>temp:</span> <span class='lbrace'>{</span><span class='label'>qty:</span> <span class='int'>80</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>DEGREES_C</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>time:</span> <span class='lbrace'>{</span><span class='label'>qty:</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='label'>units:</span> <span class='const'>MINUTES</span><span class='rbrace'>}</span><span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#program_name-instance_method" title="#program_name (instance method)">#<strong>program_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute program_name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#steps-instance_method" title="#steps (instance method)">#<strong>steps</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute steps.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#volume-instance_method" title="#volume (instance method)">#<strong>volume</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute volume.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(args = {})  &#x21d2; GoldenGateProgram </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of GoldenGateProgram.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#table-instance_method" title="#table (instance method)">#<strong>table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(args = {})  &#x21d2; <tt><span class='object_link'><a href="" title="GoldenGateProgram (class)">GoldenGateProgram</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of GoldenGateProgram.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+489
+490
+491
+492
+493
+494
+495
+496</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'staging/Cloning/op/Assemble Golden Gate/protocol.rb', line 489</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='ivar'>@program_name</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:program_name</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_program'>program</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="GoldenGateProgram (class)">GoldenGateProgram</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="#PROGRAMS-constant" title="GoldenGateProgram::PROGRAMS (constant)">PROGRAMS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_program_name'>program_name</span><span class='rbracket'>]</span>
+    <span class='ivar'>@steps</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_program'>program</span><span class='lbracket'>[</span><span class='symbol'>:steps</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='ivar'>@steps</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>PCRStep</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@volume</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:volume</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_program'>program</span><span class='lbracket'>[</span><span class='symbol'>:volume</span><span class='rbracket'>]</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_program'>program</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+487
+488
+489</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'staging/Cloning/op/Assemble Golden Gate/protocol.rb', line 487</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="program_name-instance_method">
+  
+    #<strong>program_name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute program_name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+487
+488
+489</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'staging/Cloning/op/Assemble Golden Gate/protocol.rb', line 487</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_program_name'>program_name</span>
+  <span class='ivar'>@program_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="steps-instance_method">
+  
+    #<strong>steps</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute steps.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+487
+488
+489</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'staging/Cloning/op/Assemble Golden Gate/protocol.rb', line 487</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_steps'>steps</span>
+  <span class='ivar'>@steps</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="volume-instance_method">
+  
+    #<strong>volume</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute volume.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+487
+488
+489</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'staging/Cloning/op/Assemble Golden Gate/protocol.rb', line 487</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_volume'>volume</span>
+  <span class='ivar'>@volume</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="table-instance_method">
+  
+    #<strong>table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'staging/Cloning/op/Assemble Golden Gate/protocol.rb', line 498</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_table'>table</span>
+    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_row'>row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_incubation?'>incubation?</span>
+            <span class='id identifier rubyid_row'>row</span> <span class='op'>+=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_temperature_display'>temperature_display</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_duration_display'>duration_display</span><span class='rbracket'>]</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_goto?'>goto?</span>
+            <span class='id identifier rubyid_row'>row</span> <span class='op'>+=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_goto_display'>goto_display</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_times_display'>times_display</span><span class='rbracket'>]</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unable to interpret </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='embexpr_end'>}</span><span class='tstring_content'> as a PCRStep</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_append'>append</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_table'>table</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.7.4).
+</div>
+
+    </div>
+  </body>
+</html>
