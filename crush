@@ -48,7 +48,11 @@ if ( args.length <= 2 || args[2] == "help" ) {
             break;
 
         case "pull":
-            let puller = new Puller("staging");
+            let operation_type = "";
+            if ( args.length == 4 ) {
+                operation_type = args[3];
+            }
+            let puller = new Puller("staging", operation_type);
             puller.pull()
                   .catch(error => {
                       console.log(error)
