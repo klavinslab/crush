@@ -26,7 +26,7 @@ class Puller {
             this.libs = await AQ.Library.all();
         } else {
             let ot = this.op_types[0];
-            this.op_types = await AQ.OperationType.find_by_name(ot);
+            this.op_types = await AQ.OperationType.where({name: ot});
             if (this.op_types.length === 0) {
                 console.log(ot + " does not exist. Please try again and check spelling and case.");
                 success = false;
