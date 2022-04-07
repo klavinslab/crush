@@ -10,7 +10,7 @@ To build the crush Docker image:
   docker build -t crush .
 ```
 
-Before using crush, you'll have to edit `config.json` to specify your connection to Aquarium. See `config-example.json`. 
+Before using crush, you'll have to edit `config.json` to specify your connection to Aquarium. See `config-example.json`.
 
 And to run it and log log into it
 
@@ -18,7 +18,7 @@ And to run it and log log into it
   docker run -v "$PWD:/home/crush" -it crush bash
 ```
 
-The -v option mounts the current directory into the docker image's filesystem so you can access your local files forom within the image. 
+The -v option mounts the current directory into the docker image's filesystem so you can access your local files forom within the image.
 
 Once logged into the docker instance, you should be able to execute:
 
@@ -99,6 +99,11 @@ git add .
 git commit -m "Initial commit"
 ```
 
+You can also pull a certain operation type by doing
+```
+crush pull "[operation type]"
+```
+
 Pushing Code
 ===
 
@@ -108,7 +113,7 @@ After editing code, you can push it back to an Aquarium instance. On the command
 crush push
 ```
 
-In a library code directory, this command will push the `source.rb` file to the instance. In an operation type directory, this command will push `protocol.rb`, `precondition.rb`, `test.rb`, and `documentation.md` back to the instance. 
+In a library code directory, this command will push the `source.rb` file to the instance. In an operation type directory, this command will push `protocol.rb`, `precondition.rb`, `test.rb`, and `documentation.md` back to the instance.
 
 Testing Code
 ===

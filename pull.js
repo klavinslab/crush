@@ -4,9 +4,12 @@ var fs = require('fs');
 
 class Puller {
 
-    constructor(instance_name) {
+    constructor(instance_name, operation_type) {
         this.instance_name = instance_name;
         this.op_types = [];
+        if (operation_type !== "") {
+            this.op_types.push(operation_type);
+        }
         this.libs = [];
         this.connection = new Connection(this.instance_name);
     }
@@ -17,25 +20,35 @@ class Puller {
 
         this.mkdir(this.instance_name);
         await this.connection.connect();
-
-        this.op_types = await AQ.OperationType.all();
-        this.libs = await AQ.Library.all();
-        let objects = this.libs.concat(this.op_types);
-
-        for ( let i=0; i<objects.length; i++ ) {
-            this.fix_name(objects[i]);
-            this.make_category_directory(objects[i]);
-            await this.save_object_code(objects[i]);
-            this.save_object_info(objects[i]);
-            this.show_progress(i,objects.length, objects[i].name);
+        let success = true;
+        if (this.op_types.length === 0) {
+            this.op_types = await AQ.OperationType.all();
+            this.libs = await AQ.Library.all();
+        } else {
+            let ot = this.op_types[0];
+            this.op_types = await AQ.OperationType.where({name: ot});
+            if (this.op_types.length === 0) {
+                console.log(ot + " does not exist. Please try again and check spelling and case.");
+                success = false;
+            }
         }
+        if (success) {
+            let objects = this.libs.concat(this.op_types);
 
-        console.log("\ndone!");
+            for ( let i=0; i<objects.length; i++ ) {
+                this.fix_name(objects[i]);
+                this.make_category_directory(objects[i]);
+                await this.save_object_code(objects[i]);
+                this.save_object_info(objects[i]);
+                this.show_progress(i,objects.length, objects[i].name);
+            }
 
+            console.log("\ndone!");
+        }
     }
 
-    // Makes a directory for the object's catagory. For example, 
-    // if the instance is "stagin" and the category is "Cloning", 
+    // Makes a directory for the object's catagory. For example,
+    // if the instance is "stagin" and the category is "Cloning",
     // then the following directory is set up:
     //   staging/
     //     Cloning/
@@ -44,7 +57,7 @@ class Puller {
     // Operations in this category will be put in op/ and libraries
     // in lib/
     make_category_directory(object) {
-        let path = this.instance_name + "/" + object.category + "/"; 
+        let path = this.instance_name + "/" + object.category + "/";
         this.mkdir(path);
         this.mkdir(path + "lib/");
         this.mkdir(path + "op/");
@@ -55,7 +68,7 @@ class Puller {
     mkdir(path) {
         if (!fs.existsSync(path)) {
             fs.mkdirSync(path);
-        } 
+        }
     }
 
     // Remove any forward slashes in the name of the object, which would confuse
@@ -69,17 +82,17 @@ class Puller {
         object.name = object.name.replace(/\//g, '-');
     }
 
-    // Returns the path to the directory for the operation_type. For example, 
+    // Returns the path to the directory for the operation_type. For example,
     // if the instance is called "staging", if the op_type has category "Cloning",
     //  and name "Run PCR" then this method would return staging/Cloning/op/Run \PCR/
     op_type_path(op_type) {
         return this.instance_name + "/" + op_type.category + "/op/" + op_type.name + "/";
     }
 
-    // Similar to op_type_path but for libraries. 
+    // Similar to op_type_path but for libraries.
     lib_path(lib) {
         return this.instance_name + "/" + lib.category + "/lib/" + lib.name + "/";
-    }    
+    }
 
     // Retrieves and saves all source code for the given object
     async save_object_code(object) {
@@ -87,7 +100,7 @@ class Puller {
         if ( object.model.model == "OperationType" ) {
             await this.save_op_type_code(object);
         } else if ( object.model.model == "Library" ) {
-            await this.save_library_code(object);            
+            await this.save_library_code(object);
         }
 
     }
@@ -119,7 +132,7 @@ class Puller {
         this.mkdir(path);
         fs.writeFileSync(path+"source.rb", source.content);
 
-    }    
+    }
 
     // Saves a json file describing the object, and in particular noting
     // the object's id, which can be used to find it in an Aquarium instance
@@ -131,21 +144,21 @@ class Puller {
             category: object.category,
             type: object.model.model
         }
-        let path = object.model.model == "OperationType" 
-                                       ? this.op_type_path(object) 
+        let path = object.model.model == "OperationType"
+                                       ? this.op_type_path(object)
                                        : this.lib_path(object);
         fs.writeFileSync(
-            path + "info.json", 
+            path + "info.json",
             JSON.stringify(info)
         );
     }
 
     // Get code for a protocol or library from Aquarium instance.
     //    - object is either an OperationType or a Library
-    //    - type is a string that Aquarium uses in a jnaky way to distinguish 
+    //    - type is a string that Aquarium uses in a jnaky way to distinguish
     //      code types and is either "source",  "protocol", "precondition", "test",
     //      or "documentation"
-    async get_code(object, type) { 
+    async get_code(object, type) {
 
         let codes = await AQ.Code.where({
             parent_class: object.model.model,
@@ -179,7 +192,7 @@ class Puller {
     show_progress(i,n, msg) {
         process.stdout.clearLine();
         process.stdout.cursorTo(0);
-        process.stdout.write(Math.floor(100*i/n) + "%: " + msg);    
+        process.stdout.write(Math.floor(100*(i + 1)/n) + "%: " + msg);
     }
 
 }
